@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_last.c                                     :+:      :+:    :+:   */
+/*   ft_list_foreach.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/10 00:02:00 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/10 15:50:18 by jceia            ###   ########.fr       */
+/*   Created: 2020/12/10 16:12:33 by jceia             #+#    #+#             */
+/*   Updated: 2020/12/10 16:44:13 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-t_list	*ft_list_last(t_list *begin_list)
+void ft_list_foreach(t_list *begin_list, void (*f)(void *))
 {
-	t_list* l;
-	
-	if (!begin_list)
-		return (0);
+	t_list	*l;
 
 	l = begin_list;
-	while (l->next)
+	while (l)
+	{
+		f(l->data);
 		l = l->next;
-	return (l);
+	}
 }

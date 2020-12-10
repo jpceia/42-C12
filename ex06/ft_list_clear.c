@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_last.c                                     :+:      :+:    :+:   */
+/*   ft_list_clear.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/10 00:02:00 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/10 15:50:18 by jceia            ###   ########.fr       */
+/*   Created: 2020/12/10 00:31:54 by jceia             #+#    #+#             */
+/*   Updated: 2020/12/10 16:07:31 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
+#include <stdlib.h>
 
-t_list	*ft_list_last(t_list *begin_list)
+void ft_list_clear(t_list *begin_list, void (*free_fct)(void *))
 {
-	t_list* l;
-	
-	if (!begin_list)
-		return (0);
+	t_list	*l;
+	t_list	*l_next;
 
+	if (!begin_list)
+		return ;
 	l = begin_list;
-	while (l->next)
-		l = l->next;
-	return (l);
+	while(l)
+	{
+		l_next = l->next;
+		free_fct(l->data);
+		free(l);
+		l = l_next;
+	}
 }

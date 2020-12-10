@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_last.c                                     :+:      :+:    :+:   */
+/*   ft_list_merge.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/10 00:02:00 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/10 15:50:18 by jceia            ###   ########.fr       */
+/*   Created: 2020/12/10 17:17:10 by jceia             #+#    #+#             */
+/*   Updated: 2020/12/10 17:22:23 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-t_list	*ft_list_last(t_list *begin_list)
+void ft_list_merge(t_list **begin_list1, t_list *begin_list2)
 {
-	t_list* l;
-	
-	if (!begin_list)
-		return (0);
+	t_list	*l;
 
-	l = begin_list;
+	l = *begin_list1;
 	while (l->next)
 		l = l->next;
-	return (l);
+	l->next = begin_list2;
 }
