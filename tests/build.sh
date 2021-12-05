@@ -1,0 +1,1 @@
+gcc main.c ../ex*/*.c -I. -g -o test
