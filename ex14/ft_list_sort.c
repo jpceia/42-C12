@@ -22,7 +22,7 @@ void	ft_list_sort(t_list **begin_list, int (*cmp)())
 	l_prev = 0;
 	while (l->next)
 	{
-		if (cmp(l, l->next) < 0)
+		if (cmp(l->data, l->next->data) < 0)
 		{
 			holder = l->next;
 			if (l_prev)
