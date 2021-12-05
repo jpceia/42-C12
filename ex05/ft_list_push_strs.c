@@ -18,8 +18,7 @@ t_list	*ft_list_push_strs(int size, char **strs)
 	t_list	*l;
 	t_list	*l_prev;
 
-	if(!**strs)
-		return (0);
+	if (!**strs)
 	index = 0;
 	l_prev = 0;
 	while (index < size)

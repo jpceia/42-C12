@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_push_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 00:17:44 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/10 00:20:44 by jceia            ###   ########.fr       */
+/*   Updated: 2021/12/05 01:11:09 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
- 
+
 void	ft_list_push_back(t_list **begin_list, void *data)
 {
-	t_list *l;
+	t_list	*l;
 
 	l = *begin_list;
 	while (l->next)

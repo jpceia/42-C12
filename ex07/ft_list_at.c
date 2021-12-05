@@ -3,26 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_at.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 00:49:05 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/10 16:08:08 by jceia            ###   ########.fr       */
+/*   Updated: 2021/12/05 01:08:54 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
+#include <stdlib.h>
 
-t_list *ft_list_at(t_list *begin_list, unsigned int nbr)
+t_list	*ft_list_at(t_list *begin_list, unsigned int nbr)
 {
 	unsigned int	index;
-	t_list 	*l;
+	t_list			*l;
 
 	index = 0;
 	l = begin_list;
 	while (index < nbr)
 	{
 		if (!l)
-			return (0);
+			return (NULL);
 		l = l->next;
 		index++;
 	}

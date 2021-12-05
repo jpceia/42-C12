@@ -12,7 +12,7 @@
 
 #include "ft_list.h"
 
-void ft_list_sort(t_list **begin_list, int (*cmp)())
+void	ft_list_sort(t_list **begin_list, int (*cmp)())
 {
 	t_list	*l;
 	t_list	*l_prev;
@@ -22,7 +22,7 @@ void ft_list_sort(t_list **begin_list, int (*cmp)())
 	l_prev = 0;
 	while (l->next)
 	{
-		if (cmp(l, l->next) < 0) // swap
+		if (cmp(l, l->next) < 0)
 		{
 			holder = l->next;
 			if (l_prev)
