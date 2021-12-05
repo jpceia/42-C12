@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 23:38:59 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/05 01:08:18 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/05 11:35:48 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,5 @@ typedef struct s_list
 	struct s_list	*next;
 	void			*data;
 }	t_list;
-
-t_list	*ft_create_elem(void *data);
 
 #endif
