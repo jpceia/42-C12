@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_push_strs.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 00:22:59 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/10 15:52:17 by jceia            ###   ########.fr       */
+/*   Updated: 2021/12/05 01:09:32 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
+#include <stdlib.h>
 
 t_list	*ft_list_push_strs(int size, char **strs)
 {
@@ -19,6 +20,7 @@ t_list	*ft_list_push_strs(int size, char **strs)
 	t_list	*l_prev;
 
 	if (!**strs)
+		return (NULL);
 	index = 0;
 	l_prev = 0;
 	while (index < size)
